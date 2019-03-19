@@ -1,6 +1,6 @@
 import sys
 from Medias import Media
-from Reader import Reader
+from Reader import ReaderCases
 
 def calculate_media():
     medias = Media();
@@ -26,4 +26,6 @@ if __name__ == "__main__":
     if len(sys.argv) == 1:
         raise Exception('Necesitas agregar un argumento')
     else:
-        reader = Reader(sys.argv[1])
+        reader = ReaderCases(sys.argv[1])
+        for case in reader.get_cases():
+            print(case)
