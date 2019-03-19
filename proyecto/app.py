@@ -1,9 +1,10 @@
+import sys
 from Medias import Media
+from Reader import Reader
 
-if __name__ == "__main__":
+def calculate_media():
     medias = Media();
     vals = [5, 3, 12]
-
     print('Media aritemetica')
     print( medias.aritmetica([2,4,8]) )
     print( medias.aritmetica([1, 5]) )
@@ -15,3 +16,14 @@ if __name__ == "__main__":
     print('Media armonica')
     print( medias.armonica([2,4,8]) )
     print( medias.armonica([2,3,6]) )
+
+def check_args():
+    print(f'The name of the script: {sys.argv[0]}')
+    print(f'The number of arguments (with the name of the script): {len(sys.argv)}')
+    print(f'The the arguments: {sys.argv}')
+
+if __name__ == "__main__":
+    if len(sys.argv) == 1:
+        raise Exception('Necesitas agregar un argumento')
+    else:
+        reader = Reader(sys.argv[1])
