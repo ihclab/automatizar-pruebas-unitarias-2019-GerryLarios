@@ -1,0 +1,13 @@
+0001:aritmetica:2 4 8:4.666666666666667
+0002:aritmetica:1 5:3.0
+0003:aritmetica:1 2 4 8 16 32:10.5
+0004:geometrica:1 2 4 8 16 32:5.65685424949238
+0005:geometrica:0:0.0
+0006:geometrica:2 4 8:3.9999999999999996
+0007:armonica:2 4 8:3.4285714285714284
+0008:armonica:2 3 6:3.0000000000000004
+0009:aritmetica:5 6:0.0000
+0010:geometrica:0 0 0 0:Exception
+0011:aritmetica:NULL:0.0000
+0012:geometrica:NULL:0.0000
+0013:mediaNoExiste:2 3 6:3.0320
