@@ -16,21 +16,32 @@ class Handler(object):
         instance = self._class()
         expected = None
         generated = None
-        error_type = None
+        exc_type = None
         for case in self.cases:
             try:
                 attr = getattr(instance, case['func'])
+                print(case['result'])
                 generated = attr(case['param'])
             except Exception as e:
-                error_type = e.__str__()
+                exc_type = e.__str__()
             self.results.append(
-                self.__build_results(case, generated, error_type)
+                self.__build_results(case, generated, exc_type)
             )
     
-    def __build_results(self, case, generated, error_type):
+    def __build_results(self, case, generated, exc_type):
+
+        status = False
+
+        if case['result'] == 'Exception' and exc_type != None:
+            status = True
+        else:
+            if case['result'] == generated:
+                status = True
+
         return {
             'case_id': case['id'],
+            'status': status,
             'generated': generated,
             'expected': case['result'],
-            'error': error_type,
+            'exception': exc_type,
         }
