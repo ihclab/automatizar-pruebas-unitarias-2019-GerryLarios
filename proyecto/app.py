@@ -4,7 +4,6 @@ from Reader import ReaderCases
 
 def calculate_media():
     medias = Media();
-    vals = [5, 3, 12]
     print('Media aritemetica')
     print( medias.aritmetica([2,4,8]) )
     print( medias.aritmetica([1, 5]) )
