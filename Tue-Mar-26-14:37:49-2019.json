@@ -1,0 +1,92 @@
+[{
+    "case_id": "0001",
+    "status": true,
+    "generated": 4.666666666666667,
+    "expected": 4.666666666666667,
+    "exception": null,
+    "time_exe": 5.9604644775390625e-06
+}, {
+    "case_id": "0002",
+    "status": true,
+    "generated": 3.0,
+    "expected": 3.0,
+    "exception": null,
+    "time_exe": 3.337860107421875e-06
+}, {
+    "case_id": "0003",
+    "status": true,
+    "generated": 10.5,
+    "expected": 10.5,
+    "exception": null,
+    "time_exe": 2.86102294921875e-06
+}, {
+    "case_id": "0004",
+    "status": true,
+    "generated": 5.65685424949238,
+    "expected": 5.65685424949238,
+    "exception": null,
+    "time_exe": 3.838539123535156e-05
+}, {
+    "case_id": "0005",
+    "status": true,
+    "generated": 0.0,
+    "expected": 0.0,
+    "exception": null,
+    "time_exe": 5.9604644775390625e-06
+}, {
+    "case_id": "0006",
+    "status": true,
+    "generated": 3.9999999999999996,
+    "expected": 3.9999999999999996,
+    "exception": null,
+    "time_exe": 3.337860107421875e-06
+}, {
+    "case_id": "0007",
+    "status": true,
+    "generated": 3.4285714285714284,
+    "expected": 3.4285714285714284,
+    "exception": null,
+    "time_exe": 3.337860107421875e-06
+}, {
+    "case_id": "0008",
+    "status": true,
+    "generated": 3.0000000000000004,
+    "expected": 3.0000000000000004,
+    "exception": null,
+    "time_exe": 2.1457672119140625e-06
+}, {
+    "case_id": "0009",
+    "status": false,
+    "generated": 5.5,
+    "expected": 0.0,
+    "exception": null,
+    "time_exe": 2.1457672119140625e-06
+}, {
+    "case_id": "0010",
+    "status": false,
+    "generated": 0.0,
+    "expected": "Exception",
+    "exception": null,
+    "time_exe": 2.86102294921875e-06
+}, {
+    "case_id": "0011",
+    "status": true,
+    "generated": 0.0,
+    "expected": 0.0,
+    "exception": "'NoneType' object is not iterable",
+    "time_exe": 9.5367431640625e-06
+}, {
+    "case_id": "0012",
+    "status": true,
+    "generated": 0.0,
+    "expected": 0.0,
+    "exception": "'NoneType' object is not iterable",
+    "time_exe": 3.814697265625e-06
+}, {
+    "case_id": "0013",
+    "status": false,
+    "generated": 0.0,
+    "expected": 3.032,
+    "exception": "'Media' object has no attribute 'mediaNoExiste'",
+    "time_exe": 4.0531158447265625e-06
+}]
