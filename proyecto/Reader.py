@@ -15,8 +15,8 @@ class ReaderCases(object):
             vec = self.__parsing(line)
             self.cases.append({
                 'id': vec[0],
-                'method': vec[1],
-                'values': self.__convert_values(vec[2]),
+                'func': vec[1],
+                'param': self.__convert_values(vec[2]),
                 'result': self.__convert_result(vec[3])
             })
     
