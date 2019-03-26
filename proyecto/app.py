@@ -14,5 +14,7 @@ if __name__ == "__main__":
         reader = ReaderCases(sys.argv[1])
         try:
             handler = Handler(reader.get_cases(), sys.argv[2], sys.argv[3])
+            for result in handler.get_results():
+                print(result)
         except :
             print('Error al procesar los casos de prueba.')
