@@ -1,3 +1,4 @@
+import time
 class Handler(object):
     '''Manejador de metodos por modulos'''
     def __init__(self, cases, module, the_class):
@@ -18,19 +19,18 @@ class Handler(object):
         generated = None
         exc_type = None
         for case in self.cases:
+            start = time.time()
             try:
                 attr = getattr(instance, case['func'])
                 generated = attr(case['param'])
             except Exception as e:
                 exc_type = e.__str__()
             self.results.append(
-                self.__build_results(case, generated, exc_type)
+                self.__build_results(case, generated, exc_type, time.time() - start)
             )
     
-    def __build_results(self, case, generated, exc_type):
-
+    def __build_results(self, case, generated, exc_type, time_exe):
         status = False
-
         if case['result'] == 'Exception' and exc_type != None:
             status = True
         else:
@@ -43,4 +43,5 @@ class Handler(object):
             'generated': generated,
             'expected': case['result'],
             'exception': exc_type,
+            'time_exe': time_exe
         }
