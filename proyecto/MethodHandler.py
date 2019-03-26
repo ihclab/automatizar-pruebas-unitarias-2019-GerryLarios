@@ -20,7 +20,6 @@ class Handler(object):
         for case in self.cases:
             try:
                 attr = getattr(instance, case['func'])
-                print(case['result'])
                 generated = attr(case['param'])
             except Exception as e:
                 exc_type = e.__str__()
