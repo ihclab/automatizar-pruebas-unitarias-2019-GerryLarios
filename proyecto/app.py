@@ -26,5 +26,8 @@ if __name__ == "__main__":
         raise Exception('Necesitas agregar un argumento')
     else:
         reader = ReaderCases(sys.argv[1])
-        for case in reader.get_cases():
-            print(case)
+        try:
+            for case in reader.get_cases():
+                print(case)
+        except :
+            print('Error al procesar los casos de prueba.')
