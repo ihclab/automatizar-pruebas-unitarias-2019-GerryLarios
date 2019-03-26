@@ -25,11 +25,14 @@ class ReaderCases(object):
 
     def __convert_values(self, val):
         new_values = []
-        for n in val.split(' '):
-            try:
-                new_values.append(float(n))
-            except:
-                new_values.append(None)
+        if val == 'NULL':
+            return None
+        else:
+            for n in val.split(' '):
+                try:
+                    new_values.append(float(n))
+                except:
+                    new_values.append(None)
         return new_values
 
     def __convert_result(self, result):
