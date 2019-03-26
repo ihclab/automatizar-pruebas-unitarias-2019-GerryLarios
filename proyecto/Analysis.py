@@ -1,3 +1,6 @@
+import colorama
+from colorama import Fore
+
 class Analysis(object):
     def __init__(self, cases, results):
         self.cases = cases
@@ -7,7 +10,6 @@ class Analysis(object):
         for result in self.results:
             estado = ''
             if result['status'] == False:
-                estado = 'Fallido'
+                print(f'{Fore.RED}caso {result["case_id"]}: Fallido')
             else:
-                estado = 'Exitoso'
-            print(f'caso {result["case_id"]}: {estado}')
+                print(f'{Fore.GREEN}caso {result["case_id"]}: Exitoso')
