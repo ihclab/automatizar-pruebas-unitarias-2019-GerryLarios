@@ -15,9 +15,9 @@ class ReaderCases(object):
             vec = self.__parsing(line)
             self.cases.append({
                 'id': vec[0],
-                'method': vec[1],
-                'values': self.__convert_values(vec[2]),
-                'result': vec[3]
+                'func': vec[1],
+                'param': self.__convert_values(vec[2]),
+                'result': self.__convert_result(vec[3])
             })
     
     def __parsing(self, line):
@@ -25,12 +25,21 @@ class ReaderCases(object):
 
     def __convert_values(self, val):
         new_values = []
-        for n in val.split(' '):
-            try:
-                new_values.append(float(n))
-            except:
-                new_values.append(None)
+        if val == 'NULL':
+            return None
+        else:
+            for n in val.split(' '):
+                try:
+                    new_values.append(float(n))
+                except:
+                    new_values.append(None)
         return new_values
+
+    def __convert_result(self, result):
+        try:
+            return float(result)
+        except:
+            return result
 
     def get_cases(self):
         return self.cases
